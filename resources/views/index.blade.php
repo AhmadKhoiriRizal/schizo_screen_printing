@@ -308,20 +308,6 @@ https://templatemo.com/tm-586-scholar
           </div>
         </div>
       </div>
-      {{-- <ul class="event_filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".design">Webdesign</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".development">Development</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".wordpress">Wordpress</a>
-        </li>
-      </ul> --}}
       @php
     use App\Models\Produk;
         // Ambil satu produk terakhir untuk setiap kategori
@@ -344,43 +330,6 @@ https://templatemo.com/tm-586-scholar
     </div>
     </div>
   </section>
-
-  {{-- <div class="section fun-facts">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="wrapper">
-            <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="150" data-speed="1000"></h2>
-                   <p class="count-text ">Happy Students</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="804" data-speed="1000"></h2>
-                  <p class="count-text ">Course Hours</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
-                  <p class="count-text ">Employed Students</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="counter end">
-                  <h2 class="timer count-title count-number" data-to="15" data-speed="1000"></h2>
-                  <p class="count-text ">Years Experience</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
 
   <div class="team section" id="team">
     <div class="container">
@@ -507,7 +456,7 @@ https://templatemo.com/tm-586-scholar
             <div class="item">
               <p>“Tinta plastisol adalah jenis tinta yang umum digunakan dalam sablon tekstil, khususnya pada kaos dan pakaian lainnya. Tinta ini berbasis PVC (polyvinyl chloride) dan plastisizer, yang memberikan karakteristik khusus yang membuatnya populer di industri percetakan tekstil.”</p>
               <div class="author">
-                <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt="">
+                {{-- <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt=""> --}}
                 <h4>Tinta Plastisol</h4>
                 <span class="category" data-bs-toggle="modal" data-bs-target="#mySablon">Selengkapnya</span>
               </div>
@@ -515,7 +464,7 @@ https://templatemo.com/tm-586-scholar
             <div class="item">
               <p>“Tinta rubber adalah salah satu jenis tinta yang digunakan dalam teknik sablon manual, terutama pada tekstil seperti kaos dan pakaian. Tinta ini dikenal karena sifatnya yang fleksibel dan kemampuannya untuk menempel dengan baik pada berbagai jenis kain.”</p>
               <div class="author">
-                <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt="">
+                {{-- <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt=""> --}}
                 <h4>Tinta Rubber</h4>
                 <span class="category" data-bs-toggle="modal" data-bs-target="#mySablon-1">Selengkapnya</span>
               </div>
@@ -523,7 +472,7 @@ https://templatemo.com/tm-586-scholar
             <div class="item">
               <p>“Sablon DTF (Digital Transfer Film) adalah teknik cetak modern yang digunakan untuk mentransfer desain digital ke berbagai media, terutama kain. Metode ini memungkinkan pencetakan gambar dengan detail tinggi dan warna yang cerah pada berbagai jenis kain, termasuk katun, polyester, dan campuran lainnya.”</p>
               <div class="author">
-                <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt="">
+                {{-- <img src="{{ asset('home/assets/images/testimonial-author.jpg') }}" alt=""> --}}
                 <h4>Sablon DTF (Digital Transfer Film)</h4>
                 <span class="category" data-bs-toggle="modal" data-bs-target="#mySablon-2">Selengkapnya</span>
               </div>
@@ -770,41 +719,6 @@ https://templatemo.com/tm-586-scholar
         </span>
     </a>
 </div>
-
-{{--Pesan Sukses--}}
-@if (session()->has('success'))
-<div class="toast-container position-fixed top-0 end-0 p-3">
-<div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-        <img src="..." class="rounded me-2" alt="...">
-        <strong class="me-auto">Informasi</strong>
-        <small>{{ now()->diffForHumans() }}</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-        {{ session('success') }}
-    </div>
-</div>
-</div>
-@endif
-{{--Pesan error--}}
-@if ($errors->any())
-<div class="toast-container position-fixed top-0 end-0 p-3">
-<div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-        <img src="..." class="rounded me-2" alt="...">
-        <strong class="me-auto">Informasi</strong>
-        <small>{{ now()->diffForHumans() }}</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-        @foreach ($errors->all() as $error)
-            {{ $error }}<br>
-        @endforeach
-    </div>
-</div>
-</div>
-@endif
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
