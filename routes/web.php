@@ -26,8 +26,8 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
-Route::get('/1', function () {
-    return view('admin.index');
+Route::get('/katalog', function () {
+    return view('katalog');
 });
 
 Route::get('/dashboard', function () {

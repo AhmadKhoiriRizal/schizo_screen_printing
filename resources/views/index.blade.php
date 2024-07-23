@@ -72,10 +72,10 @@ https://templatemo.com/tm-586-scholar
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="#services">Jenis Kain</a></li>
-                      <li class="scroll-to-section"><a href="#courses">Katalog Baju</a></li>
-                      <li class="scroll-to-section"><a href="#team">Harga</a></li>
-                      <li class="scroll-to-section"><a href="#events">Events</a></li>
+                      <li class="scroll-to-section"><a href="#jenis-kain">Jenis Kain</a></li>
+                      <li class="scroll-to-section"><a href="#katalog-baju">Katalog Baju</a></li>
+                      <li class="scroll-to-section"><a href="#harga">Harga</a></li>
+                      <li class="scroll-to-section"><a href="#jenis-sablon">Jenis Sablon</a></li>
                       <li class="scroll-to-section"><a href="#contact"><button class="btn btn-danger">Pesan Sekarang!!</button></a></li>
                   </ul>
                     <a class='menu-trigger'>
@@ -136,7 +136,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </div>
 
-  <div class="services section" id="services">
+  <div class="services section">
     <div class="container">
         <div class="text-center text-warning mb-5   ">
             <h1 class="title">Keuntungan Membeli Produk Kami</h1>
@@ -190,7 +190,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </div>
 
-  <div class="section about-us">
+  <div class="section about-us" id="jenis-kain">
       <div class="text-center text-warning mb-5">
           <h1 class="title" style="position: relative; top: -80px;">Macam - macam Jenis Kain</h1>
       </div>
@@ -298,7 +298,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </div>
 
-  <section class="section courses" id="courses" >
+  <section class="section courses" id="katalog-baju" >
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -331,7 +331,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </section>
 
-  <div class="team section" id="team">
+  <div class="team section" id="harga">
     <div class="container">
         <div class="text-center text-warning mb-5   ">
             <h1 class="title">Daftar Harga Baju</h1>
@@ -448,7 +448,7 @@ https://templatemo.com/tm-586-scholar
   <div class="text-center text-warning mb-5">
       <h1 class="title" style="position: relative; bottom: -100px;">Macam - macam Jenis Sablon</h1>
   </div>
-  <div class="section testimonials">
+  <div class="section testimonials" id="jenis-sablon">
       <div class="container">
       <div class="row">
         <div class="col-lg-7">

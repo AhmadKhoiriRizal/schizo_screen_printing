@@ -51,7 +51,7 @@ https://templatemo.com/tm-586-scholar
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area-katalog header-sticky">
+  <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -71,12 +71,12 @@ https://templatemo.com/tm-586-scholar
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="/">Services</a></li>
-                      <li class="scroll-to-section"><a href="/">Courses</a></li>
-                      <li class="scroll-to-section"><a href="/">Team</a></li>
+                      <li class="scroll-to-section"><a href="/">Home</a></li>
+                      <li class="scroll-to-section"><a href="/">Jenis Kain</a></li>
+                      <li class="scroll-to-section"><a href="/">Katalog Baju</a></li>
+                      <li class="scroll-to-section"><a href="/">Harga</a></li>
                       <li class="scroll-to-section"><a href="/">Events</a></li>
-                      <li class="scroll-to-section"><a href="/">Register Now!</a></li>
+                      <li class="scroll-to-section"><a href="/"><button class="btn btn-danger">Pesan Sekarang!!</button></a></li>
                   </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -89,112 +89,39 @@ https://templatemo.com/tm-586-scholar
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <section class="mt-4" id="courses" >
+
+  <div id="courses">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            {{-- <h6>Latest Courses</h6> --}}
-            <h1>Katalog Baju</h1>
-          </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <h1>Katalog Baju</h1>
+                </div>
+            </div>
         </div>
-      </div>
-      {{-- <ul class="event_filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".design">Webdesign</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".development">Development</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".wordpress">Wordpress</a>
-        </li>
-      </ul> --}}
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-01.jpg') }}" alt=""></a>
-              {{-- <span class="category">Webdesign</span> --}}
-              {{-- <span class="price"><h6><em>$</em>160</h6></span> --}}
+
+        <div class="row event_box">
+            @php
+            use App\Models\Produk;
+            $produks = Produk::orderBy('kategori')->get();
+            @endphp
+
+            @foreach($produks as $produk)
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" id="{{ $produk->kategori }}">
+                <div class="events_item">
+                    <div class="thumb">
+                        <a href="/katalog"><img src="{{ asset('storage/produk/' . $produk->image) }}" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                        <h4 class="text-center">{{ $produk->kategori }}</h4>
+                    </div>
+                </div>
             </div>
-            <div class="down-content">
-                <h4 class="text-center">Kaos</h4>
-                {{-- <span class="author">Stella Blair</span> --}}
-            </div>
-          </div>
+            @endforeach
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-02.jpg') }}" alt=""></a>
-              {{-- <span class="category">Development</span> --}}
-              {{-- <span class="price"><h6><em>$</em>340</h6></span> --}}
-            </div>
-            <div class="down-content">
-                <h4 class="text-center">Polo Shirt</h4>
-              {{-- <span class="author">Cindy Walker</span> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-03.jpg') }}" alt=""></a>
-              {{-- <span class="category">Wordpress</span> --}}
-              {{-- <span class="price"><h6><em>$</em>640</h6></span> --}}
-            </div>
-            <div class="down-content">
-                <h4 class="text-center">Kemeja</h4>
-              {{-- <span class="author">David Hutson</span> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-04.jpg') }}" alt=""></a>
-              {{-- <span class="category">Development</span> --}}
-              {{-- <span class="price"><h6><em>$</em>450</h6></span> --}}
-            </div>
-            <div class="down-content">
-                <h4 class="text-center">Wearpack</h4>
-              {{-- <span class="author">Stella Blair</span> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-05.jpg') }}" alt=""></a>
-              {{-- <span class="category">Wordpress</span> --}}
-              {{-- <span class="price"><h6><em>$</em>320</h6></span> --}}
-            </div>
-            <div class="down-content">
-                <h4 class="text-center">Rompi</h4>
-              {{-- <span class="author">Sophia Rose</span> --}}
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="{{ asset('home/assets/images/course-06.jpg') }}" alt=""></a>
-              {{-- <span class="category">Webdesign</span> --}}
-              {{-- <span class="price"><h6><em>$</em>240</h6></span> --}}
-            </div>
-            <div class="down-content">
-                <h4 class="text-center">Topi</h4>
-              {{-- <span class="author">David Hutson</span> --}}
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</div>
+
 
   <footer>
     <div class="container">
@@ -204,7 +131,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </footer>
 
-  {{-- <div class="body-pesanan elementor-button-sticky-yes elementor-button-wrapper">
+  <div class="body-pesanan elementor-button-sticky-yes elementor-button-wrapper">
       <a data-grc="yes" data-awdata="{&quot;send_to&quot;:&quot;AW-716271965/PUSjCN3SwLEBEN3ixdUC&quot;,&quot;value&quot;:&quot;10000&quot;}" href="https://api.whatsapp.com/send?phone=628562785299&amp;text=Halo%20Zipzap%2C%20saya%20mau%20pesan%20polo%20dengan%20detail%20pemesanan%20%3A%20%0ANama%20%3A%20%0AProduk%3A%0AJumlah%3A%0ADomisili%20%3A%20%0ADeadline%20%3A%0AMohon%20dibantu%20ya%2C%20terimakasih." target="_blank" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-shrink">
         <span class="pemesanan">
             <span class="btn btn-danger">
@@ -215,7 +142,7 @@ https://templatemo.com/tm-586-scholar
             </span>
         </span>
     </a>
-</div> --}}
+</div>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

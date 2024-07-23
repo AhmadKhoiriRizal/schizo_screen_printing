@@ -1,6 +1,12 @@
 @extends('admin.layouts.layouts')
 
 @section('content')
+@php
+    use App\Models\Pesanan;
+    use App\Models\Produk;
+    $PesananCount = Pesanan::Count();
+    $ProdukCount = Produk::Count();
+@endphp
 <div class="pagetitle">
     <h1>Dashboard</h1>
     <nav>
@@ -39,11 +45,11 @@
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bi bi-cart"></i>
+                    <i class="ri-archive-line"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6>{{ $PesananCount }}</h6>
+                    {{-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> --}}
 
                   </div>
                 </div>
@@ -77,8 +83,8 @@
                     <i class="bi bi-grid"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>$3,264</h6>
-                    <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6>{{ $ProdukCount }}</h6>
+                    {{-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> --}}
 
                   </div>
                 </div>
